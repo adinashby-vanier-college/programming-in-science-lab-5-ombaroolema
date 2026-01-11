@@ -5,23 +5,61 @@
 # *   *
 # *****
 def hollow_square(n):
-    return ""
+    result = ""
+
+    for i in range (n):
+        for j in range (n):
+            if i == 0 or i == n - 1 or j == 0 or j == n - 1:
+                result += "*"
+            else:
+                result += " "
+        if i != n - 1:
+            result += "\n"
+
+    return result
+
 
 # 1
 # 12
 # 123
 # 1234
 def number_pattern(n):
-    return ""
+    result = ""
+    
+    for i in range (n):
+        for j in range (i + 1):
+            result += str(j + 1)
+        if i != n - 1:
+            result += "\n"
+
+    return result
+
 
 # Example: For n = 5, sum = 1 + 2 + 3 + 4 + 5 = 15
 def sum_of_natural_numbers(n):
-    return ""
+    total = 0
+    i = 1
 
+    while i <= n :
+        total += i
+        i += 1
+
+    return total
 # Example for n = 4:
 #    *
 #   ***
 #  *****
 # *******
 def centered_star_pyramid(n):
-    return ""
+    result = ""
+
+    for i in range (n):
+        for j in range (n - i - 1):
+            result += " "
+        for k in range (2 * i + 1):
+            result += "*"
+        if i != n - 1:
+            result += "\n"
+
+    return result
+
